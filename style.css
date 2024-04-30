@@ -1,0 +1,161 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  --white: #FFFFFF; 
+  --grey: 19182B;
+  --pale-navy: #36384D; 
+  --dark-navy: #242742;
+  --vermellion: #FF6155;
+  --gradient: linear-gradient(#FF6A3A 0%, #FF527B 100%);
+
+  --ff-sans-1: "Roboto", sans-serif;
+  --fs-small: .75rem;
+  --fs-heading: 2.5rem;
+  --fw-bold: 700;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility             */
+/* ------------------- */
+
+/* general */
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+/* typhography */
+.text-dark-navy { color: var(--dark-navy)};
+.text-white { color: var(--white)};
+.text-vermellion { color: var(--vermellion)};
+
+.fs-small { font-size: var(--fs-small)};
+.fs-heading { font-size: var(--fs-heading)};
+.fw.bold { font-weight: var(--fw-bold)};
+@media (min-width: 50rem) {
+  html {
+    --fs-heading: 3.5rem;
+  }
+}
+
+/* ------------------- */
+/* Compenent           */
+/* ------------------- */
+
+.btn {
+  border: 0;
+  border-radius: 6px;
+  padding-block: 1rem;
+  background-color: var(--dark-navy);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-image: var(--gradient);
+}
+
+.input-email {
+  border: 0;
+  border-radius: 6px;
+  outline: 1px solid var(--grey);
+}
+
+.input-email::placeholder {
+  color: var(--grey);
+}
+
+.input-email:focus {
+  outline-color: var(--dark-navy);
+}
+
+.error {
+  outline-color: var(--vermellion);
+}
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
