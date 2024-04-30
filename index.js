@@ -3,6 +3,7 @@ const signUpWrapper = document.querySelector(".sign-up-wrapper");
 const successWrapper = document.querySelector(".success-wrapper");
 const error = document.querySelector("label span");
 const email = document.querySelector(".input-email");
+const registeredEmail = document.querySelector("[data-email]");
 
 signUpForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -35,5 +36,6 @@ function showError() {
 function showSucces() {
   email.classList.remove("error");
   error.setAttribute("data-visible", false);
+  registeredEmail.textContent = email.value;
   return true;
 }
