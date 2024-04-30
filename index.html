@@ -13,13 +13,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
 
   <main>
      <!-- Sign-up form start -->
 
-    <section data-visble="true">
+    <section class="sign-up-wrapper" data-visible="true">
       <div class="sign-up wrapper grid bg-white">
         <picture class="illustration">
           <source srcset="images/illustration-sign-up-desktop.svg" media="(min-width:45rem)">
@@ -37,8 +38,8 @@
             <li>And much more!</li>
           </ul>
   
-          <form action="#" name="sign-up-form" novalidate>
-            <label for="email" class="fs-small fw-bold flex">Email address<span class="text-vermellion" data-visble="false" >Valid email required</span></label>
+          <form action="#" name="sign-up-form" class="sign-up-form" novalidate>
+            <label for="email" class="fs-small fw-bold flex">Email address<span class="text-vermellion" data-visible="false" >Valid email required</span></label>
             <input type="email" id="email" class="input-email" placeholder="email@company.com" required>
             <button class="btn text-white fw-bold">Subscribe to monthly newsletter</button>
           </form>
@@ -47,7 +48,7 @@
     </section>
 
     <!-- Success message start -->
-    <section data-visble="false">
+    <section class="success-wrapper" data-visible="false">
       <div class="success wrapper text-dark-navy bg-white flex">
         <img src="images/icon-success.svg" alt="Tick" class="icon">
         <h1 class="fs-heading fw-bold">Thanks for subscribing!</h1>
