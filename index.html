@@ -16,52 +16,46 @@
 </head>
 <body>
 
-  <!-- Sign-up form start -->
-
   <main>
-    <section>
-      <picture class="illustration">
-        <source srcset="images/illustration-sign-up-desktop.svg" media="min-width: 50rem">
-        <img src="images/illustration-sign-up-mobile.svg" alt="" class="img">
-      </picture>
+     <!-- Sign-up form start -->
 
-      <div class="text-dark-navy">
-        <h1 class="fs-heading fw-bold">Stay updated!</h1>
-
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-
-        <form action="#" name="sign-in-form">
-          <label for="email" class="fs-small fw-bold">Email address</label>
-          <input type="email" id="email" class="input-email" placeholder="email@company.com" required>
-          <button type="submit" class="btn text-white fw-bold">Subscribe to monthly newsletter</button>
-        </form>
+    <section data-visble="true">
+      <div class="sign-up wrapper grid bg-white">
+        <picture class="illustration">
+          <source srcset="images/illustration-sign-up-desktop.svg" media="(min-width:45rem)">
+          <img src="images/illustration-sign-up-mobile.svg" alt="" class="img">
+        </picture>
+  
+        <div class="sign-up-content text-dark-navy">
+          <h1 class="fs-heading fw-bold">Stay updated!</h1>
+  
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+  
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+  
+          <form action="#" name="sign-up-form" novalidate>
+            <label for="email" class="fs-small fw-bold flex">Email address<span class="text-vermellion" data-visble="false" >Valid email required</span></label>
+            <input type="email" id="email" class="input-email" placeholder="email@company.com" required>
+            <button class="btn text-white fw-bold">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
       </div>
     </section>
+
+    <!-- Success message start -->
+    <section data-visble="false">
+      <div class="success wrapper text-dark-navy bg-white flex">
+        <img src="images/icon-success.svg" alt="Tick" class="icon">
+        <h1 class="fs-heading fw-bold">Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <span class="fw-bold" data-email=""></span>. Please open it and click the button inside to confirm your subscription.</p>
+        <button class="btn text-white fw-bold">Dismiss message</button>
+    </section>
+      </div>
+      
   </main>
-  
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
