@@ -4,30 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Sign-up form start -->
 
-  Stay updated!
+  <main>
+    <section>
+      <picture class="illustration">
+        <source srcset="images/illustration-sign-up-desktop.svg" media="min-width: 50rem">
+        <img src="images/illustration-sign-up-mobile.svg" alt="" class="img">
+      </picture>
 
-  Join 60,000+ product managers receiving monthly updates on:
+      <div class="text-dark-navy">
+        <h1 class="fs-heading fw-bold">Stay updated!</h1>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-  Email address
-  email@company.com
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
 
-  Subscribe to monthly newsletter
+        <form action="#" name="sign-in-form">
+          <label for="email" class="fs-small fw-bold">Email address</label>
+          <input type="email" id="email" class="input-email" placeholder="email@company.com" required>
+          <button type="submit" class="btn text-white fw-bold">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
 
   <!-- Sign-up form end -->
 
